@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Mayrose Design" />
+    <meta name="Description" content="">
+    <meta name="keywords" content="">
+    <!-- 1260x750 -->
+    <meta property="og:image"              content="assets/images/imgprops/1_OhlerBuild.jpg" />
+    <meta property="og:title"              content="Presidio Roofing ®" />
+    <meta property="og:description"        content="The Best Roofers In Texas. Highly skilled workers using the best roofing materials available" />
+<!-- Nav=168 Aboutus=254 video=315 Why=371 Services=534 DoYouKnow=483 expertise=670 -->
+<!-- How=793 Port=900 Team=1290 Fb=1566 Testimonial=1625 Clients=1720 Blog=1825 -->
+<!-- Subscribe=1925 Contact=1972 Foot=2172 -->
+<!-- Centi *********************************************************************-->
+    <!-- <meta name="preview_image" content="assets/images/imgprops/1_OhlerBuild.jpg"/>
+    <meta name="content_type_machine" content="product">
+    <meta name="content_type" content="Product">
+    <meta name="product_hierarchy" content="Residential and Commercial Roofing">
+    <meta name="generator" content="Drupal 7 (http://drupal.org)"/>
+    <link rel="canonical" href="http://www.presidioroof.com"/>
+    <link rel="shortlink" href="http://www.presidioroofing.info"/>
+    <meta property="og:site_name" content="Presidio Roofing"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="http://www.presidioroof.com"/>
+    <meta property="og:title" content="Presidio® Metal Roofing - Slate"/>
+    <meta property="og:updated_time" content="2017-03-27T17:04:24-05:00"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:url" content="http://www.presidioroof.com"/>
+    <meta name="twitter:title" content="Presidio Roofing "/>
+    <meta property="article:published_time" content="2017-03-27T17:04:24-05:00"/>
+    <meta property="article:modified_time" content="2017-03-27T17:04:24-05:00"/>
+    <meta itemprop="name" content="Presidio Roofing"/> -->
+
+    <!--  Document Title=============================================-->
+    <title>Fruits</title>
+    <!--  Favicons=============================================-->
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="http://www.presidioroof.com/assets/lib/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="http://www.presidioroof.com/assets/lib/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://www.presidioroof.com/assets/lib/ionicons/css/ionicons.css">
+    <link rel="stylesheet" href="http://www.presidioroof.com/assets/lib/owlcarousel/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="http://www.presidioroof.com/assets/lib/owlcarousel/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" href="http://www.presidioroof.com/assets/lib/FlexSlider/flexslider.css">
+    <link rel="stylesheet" href="http://www.presidioroof.com/assets/lib/magnific-popup/dist/magnific-popup.css"/>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:100,300,400">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:100,300,400">
+    <link rel="stylesheet" href="http://www.presidioroof.com/assets/css/ie_fix.css">
+    <script src="http://www.presidioroof.com/assets/lib/components-modernizr/modernizr.js"></script>
+    <script src="http://www.presidioroof.com/assets/lib/jquery/dist/jquery.js"></script>
+    <script src="http://www.presidioroof.com/assets/lib/bootstrap/dist/js/bootstrap.js"></script>
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}" />
+
+<!-- map javascript )))))))))))))))))))))))))))))))))))))))))))))))-->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCk6fCUTz2228o8Jv90q78qEQKkm_rjScY&callback=initialize"
+type="text/javascript"></script>
+
+<!-- https://www.google.com/maps/@33.7722866,-118.1648778,14z?hl=en -->
+    <script type="text/javascript">
+    var map;
+    var marker;
+
+
+    function initialize() {
+     var mapOptions = {
+      center: new google.maps.LatLng(33.7722866, -118.1648778),
+      zoom: 14
+     };
+
+     map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+     google.maps.event.addListener(map, 'click', function(event){
+      placeMarker(event.latLng);
+     });
+     placeCrimes({{crimes | safe}});
+
+   }//  #end function
+
+
+
+    function placeCrimes(crimes) {
+     for (i=0; i<crimes.length; i++) {
+      crime = new google.maps.Marker( {
+       position: new google.maps.LatLng(crimes[i].latitude, crimes[i].longitude),
+       map: map,
+       title: crimes[i].date + "\n" +
+        crimes[i].category + "\n" + crimes[i].description
+       }
+      );
+     }
+    }
+
+    function placeMarker(location) {
+     if (marker) {
+      marker.setPosition(location);
+     } else {
+      marker = new google.maps.Marker({
+       position: location,
+       map: map
+      });
+     }
+     document.getElementById('latitude').value = location.lat();
+     document.getElementById('longitude').value = location.lng();
+    }
+
+
+
+        </script>
+<script type="text/javascript">
+console.log("A message");
+a=9;
+console.log("The value of a is: " + a);
+</script>
+  </head>
+
+
+
+      <body onload="initialize()">
+
+<div class="container">
+  <div class="row">
+    <div class="marginleft pad20  col-sm-12">
+
+
+        <h1 class="">Tree map</h1>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+
+
+      <div class="pad20  col-sm-12">
+        <p>A map of fruit trees in the Long Beach area.</p>
+        </div>
+
+
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class=" col-sm-12">
+
+        <div id="map-canvas" style=""></div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="pad20 col-sm-6">
+
+
+        <!-- <div id="newcrimeform"> -->
+            <h2>Submit new fruit tree</h2>
+            {% if error_message %}
+                <div id="error"><p>{{error_message}}</p></div>
+            {% endif %}
+            <form action="/submittree" method="POST">
+
+          <label for="category">Type</label>
+          <select name="category" id="category">
+              {% for category in categories %}
+                  <option value="{{category}}">{{category}}</option>
+              {% endfor %}
+          </select>
+
+          <label for="date">Date</label>
+          <input name="date" id="date" type="date">
+
+          <label for="latitude">Latitude</label>
+          <input name="latitude" id="latitude" type="text" readonly>
+          <label for="longitude">Longitude</label>
+          <input name="longitude" id="longitude" type="text" readonly>
+
+          <label for="description">Description</label>
+          <textarea name="description" id="description" placeholder="A brief but detailed  description of the crime"></textarea>
+          <input type="submit" value="Submit">
+          </form>
+        <!-- </div> -->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="pad20 col-sm-12">
+<p><b>by</b><a href="mayrosedg.com">Mayrose Design</a>
+        </div>
+      </div>
+    </div>
+
+
+    </body>
+</html>
