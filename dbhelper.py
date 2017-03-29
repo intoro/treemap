@@ -35,11 +35,11 @@ class DBHelper:
      named_trees = []
      for tree in cursor:
       named_trees = {
-       'latitude': trees[0],
-       'longitude': trees[1],
-       'date': datetime.datetime.strftime(trees[2], '%Y- %m-%d'),
-       'category': trees[3],
-       'description': trees[4]
+       'latitude': tree[0],
+       'longitude': tree[1],
+       'date': datetime.datetime.strftime(tree[2], '%Y- %m-%d'),
+       'category': tree[3],
+       'description': tree[4]
       }
       named_trees.append(named_tree)
      return named_trees
