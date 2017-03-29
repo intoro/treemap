@@ -41,7 +41,7 @@ class DBHelper:
        'category': trees[3],
        'description': trees[4]
       }
-      named_trees.append(named_trees)
+      named_trees.append(named_tree)
      return named_trees
     finally:
      connection.close()
