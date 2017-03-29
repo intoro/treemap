@@ -33,7 +33,7 @@ class DBHelper:
      with connection.cursor() as cursor:
       cursor.execute(query)
      named_trees = []
-     for trees in cursor:
+     for tree in cursor:
       named_trees = {
        'latitude': trees[0],
        'longitude': trees[1],
