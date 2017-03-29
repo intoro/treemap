@@ -34,7 +34,7 @@ class DBHelper:
       cursor.execute(query)
      named_trees = []
      for tree in cursor:
-      named_trees = {
+      named_tree = {
        'latitude': tree[0],
        'longitude': tree[1],
        'date': datetime.datetime.strftime(tree[2], '%Y- %m-%d'),
