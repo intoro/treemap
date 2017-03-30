@@ -173,11 +173,12 @@ console.log("The value of a is: " + a);
             <form action="/submittree" method="POST">
 
           <label for="category">Type</label>
-          <select name="category" id="category">
+          <input name="category" id="category" type="text" >
+          <!-- <select name="category" id="category">
               {% for category in categories %}
                   <option value="{{category}}">{{category}}</option>
               {% endfor %}
-          </select>
+          </select> -->
 
           <label for="date">Date</label>
           <input name="date" id="date" type="date">
