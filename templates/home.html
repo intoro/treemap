@@ -80,16 +80,16 @@ type="text/javascript"></script>
      google.maps.event.addListener(map, 'click', function(event){
       placeMarker(event.latLng);
      });
-     placeTrees({{crimes | safe}});
+     placeTrees({{trees | safe}});
 
    }//  #end function
 
 
 
     function placeTrees(trees) {
-     for (i=0; i<crimes.length; i++) {
+     for (i=0; i<trees.length; i++) {
       tree = new google.maps.Marker( {
-       position: new google.maps.LatLng(crimes[i].latitude, trees[i].longitude),
+       position: new google.maps.LatLng(trees[i].latitude, trees[i].longitude),
        map: map,
        title: trees[i].date + "\n" +
         trees[i].category + "\n" + trees[i].description
@@ -188,7 +188,7 @@ console.log("The value of a is: " + a);
           <input name="longitude" id="longitude" type="text" readonly>
 
           <label for="description">Description</label>
-          <textarea name="description" id="description" placeholder="A brief but detailed  description of the crime"></textarea>
+          <textarea name="description" id="description" placeholder="A brief but detailed  description of the tree"></textarea>
           <input type="submit" value="Submit">
           </form>
         <!-- </div> -->
