@@ -86,13 +86,13 @@ type="text/javascript"></script>
 
 
 
-    function placeCrimes(crimes) {
+    function placeTrees(trees) {
      for (i=0; i<crimes.length; i++) {
-      crime = new google.maps.Marker( {
-       position: new google.maps.LatLng(crimes[i].latitude, crimes[i].longitude),
+      tree = new google.maps.Marker( {
+       position: new google.maps.LatLng(crimes[i].latitude, trees[i].longitude),
        map: map,
-       title: crimes[i].date + "\n" +
-        crimes[i].category + "\n" + crimes[i].description
+       title: trees[i].date + "\n" +
+        trees[i].category + "\n" + trees[i].description
        }
       );
      }
